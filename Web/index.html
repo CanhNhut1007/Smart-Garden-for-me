@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<link rel="icon" href="images/smartgarden1.jpg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta charset="UTF-8">
+	<title>Smart Garden for me</title>
+	<link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src='https://www.google.com/jsapi'></script>
+    <script src='js/jsFunctionsSmartGardenforme.js'></script>
+	</head>
+
+
+   <script>
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart); 
+  </script>
+
+  
+	<body>
+	<header>  
+		<h1  style="font-size:80px;text-align: center">Smart Garden for me</h1>
+	</header>	
+	<br>
+	<section class="whole">
+		<span class="hide">Spare</span>
+		<a href = "#analog" class="button">Analog Sensors</a>
+		<span class="hide">Spare</span>
+		<a href = "#digital" class="button">Digital Sensors</a>
+		<!--button type="button" class="button" ><a href ="#digital">Digital Sensors</a></button-->
+		<span class="hide">Spare</span>
+		<a href = "#actuator" class="button">Actuators</a>
+		<!--button type="button" class="button"><a href ="#actuator">Actuators</a></button-->
+	</section>
+	
+	<section class="whole">
+      <h2 id="analog">1. Analog Sensors</h2>
+      <div id="chart_div"> </div>
+    </section>
+		
+	<section class="whole">
+      <h2 id="digital">2. Digital Sensors</h2>
+	  <br>
+      <span class="hide">spare</span>
+      <span id = "act1">==&GT </span>
+      <span id = "echoAct1"> LAMP</span>
+      <span class="hide">spare</span>
+      <span id = "act2">==&GT </span>
+      <span id = "echoAct2"> PUMP</span>
+	 <br>
+	  <br>
+     </section>
+
+    <section class="whole">
+      <h2 id="actuator">3. Actuators</h2>
+      <span class="hide">Spare</span>
+      <button id = "act1On" class="button" onclick="changeField7(1)">  LAMP ON </button>
+      <button id = "act1Off" class="button" onclick="changeField7(0)"> LAMP OFF</button>
+      <span class="hide">Spare</span>
+      <button  id = "act2On" class="button" onclick="changeField8(1)">PUMP ON </button>
+      <button  id = "act2Off" class="button" onclick="changeField8(0)">PUMP OFF</button>
+    </section>
+	
+	 <footer>
+	 <p style="text-align:center">Smart garden for me.</p>
+	 <pre>                   Create and build by:                     
+									1. Châu Thị Nguyệt
+									2. Lê Thanh Hồng Nhựt
+									3. Thạch Cảnh Nhựt
+									4. Phan Đặng Trúc Quyên</pre>
+    </footer>
+    </body>
+</html>
